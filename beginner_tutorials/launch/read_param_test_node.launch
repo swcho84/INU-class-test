@@ -1,0 +1,8 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find beginner_tutorials)/config/rosconsole.config"/>
+
+	<rosparam command="load" file="$(find beginner_tutorials)/config/topic.yaml"/>
+  <rosparam command="load" file="$(find beginner_tutorials)/config/custom_param.yaml"/>
+
+  <node name="read_rosparam" pkg="beginner_tutorials" type="read_rosparam_node" output="screen" />
+</launch>

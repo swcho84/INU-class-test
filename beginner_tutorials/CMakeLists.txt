@@ -161,6 +161,14 @@ add_executable(sub_advanced_test_ros_node
 target_link_libraries(sub_advanced_test_ros_node ${catkin_LIBRARIES})
 add_dependencies(sub_advanced_test_ros_node ${catkin_EXPORTED_TARGETS})
 
+add_executable(read_rosparam_node 
+  include/read_param.h 
+  lib/read_param.cpp 
+  src/main_read_rosparam_test_node.cpp
+)
+target_link_libraries(read_rosparam_node ${catkin_LIBRARIES})
+add_dependencies(read_rosparam_node ${catkin_EXPORTED_TARGETS})
+
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

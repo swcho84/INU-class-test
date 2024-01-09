@@ -1,0 +1,31 @@
+selectionA:
+  a: 1.0
+  b: 2.0
+  c: 3.0
+
+selectionB:
+  a: -1.0
+  b: -2.0
+  c: -3.0
+  
+selectionC:
+  a: 1
+  b: "first"
+  c: false
+
+rect:
+  size: 5
+  type: 0
+
+signal:
+  size: 3
+  a: 2.0
+  b: 4.0
+  c: 6.0
+  
+array: [1, 2, 3, 4, 5]
+
+imgproc101:
+  imgFolder: "/img/"
+  LaneImg: "LaneImage.jpg"
+  VehicleImg: "VehicleImage.jpg"
