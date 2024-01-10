@@ -57,6 +57,7 @@ public:
 
 private:
   bool ReadRosParams();
+  
   void ReadRosParam(ros::NodeHandle& nh, const string& key, float& val);
   void ReadRosParam(ros::NodeHandle& nh, const string& key, double& val);
   void ReadRosParam(ros::NodeHandle& nh, const string& key, bool& val);

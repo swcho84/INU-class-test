@@ -1,0 +1,9 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find beginner_tutorials)/config/rosconsole.config"/>
+
+  <node name="pub_basic_test" pkg="beginner_tutorials" type="pub_basic_test_ros_node" output="screen">
+  </node>
+  
+  <node name="sub_basic_test" pkg="beginner_tutorials" type="sub_basic_test_ros_node" output="screen">
+  </node>
+</launch>

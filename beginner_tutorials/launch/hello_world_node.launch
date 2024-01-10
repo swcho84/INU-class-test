@@ -1,0 +1,6 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find beginner_tutorials)/config/rosconsole.config"/>
+
+  <node name="hello_world" pkg="beginner_tutorials" type="hello_world_ros_node" output="screen">
+  </node>
+</launch>
