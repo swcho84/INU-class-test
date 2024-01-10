@@ -52,12 +52,10 @@ add_message_files(
   DIRECTORY msg
 )
 
-## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+# Generate services in the 'srv' folder
+add_service_files(
+  DIRECTORY srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -169,6 +167,21 @@ add_executable(read_rosparam_node
 target_link_libraries(read_rosparam_node ${catkin_LIBRARIES})
 add_dependencies(read_rosparam_node ${catkin_EXPORTED_TARGETS})
 
+add_executable(srv_server_ros_node 
+  include/srv_server_test_ros.h 
+  lib/srv_server_test_ros.cpp 
+  src/main_srv_server.cpp
+)
+target_link_libraries(srv_server_ros_node ${catkin_LIBRARIES})
+add_dependencies(srv_server_ros_node ${catkin_EXPORTED_TARGETS})
+
+add_executable(srv_client_ros_node 
+  include/srv_client_test_ros.h 
+  lib/srv_client_test_ros.cpp 
+  src/main_srv_client.cpp
+)
+target_link_libraries(srv_client_ros_node ${catkin_LIBRARIES})
+add_dependencies(srv_client_ros_node ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

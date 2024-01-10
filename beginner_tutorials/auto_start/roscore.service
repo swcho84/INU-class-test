@@ -1,9 +1,10 @@
 [Unit]
-Description=roscore_innospace
+Description=roscore_INU
 
 [Service]
+ExecStartPre=/bin/sleep 10
 ExecStart=/usr/bin/python3 /opt/ros/noetic/bin/roscore
-EnvironmentFile=/etc/env_inno_blackbox
+EnvironmentFile=/etc/systemd/system/swcho_env
 Restart=on-abort
 RestartSec=5
 
