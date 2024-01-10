@@ -1,0 +1,5 @@
+making env file
+
+'''
+env >> (env_file_name)
+'''

@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="tty", DRIVERS=="usb", ATTRS{serial}=="085836646ce0e811a7b76d387015ce8a", ATTRS{idProduct}=="ea60", ATTRS{idVendor}=="10c4", ATTRS{product}=="CP2102N USB to UART Bridge Controller", SYMLINK+="rf_dist_sensor_2"

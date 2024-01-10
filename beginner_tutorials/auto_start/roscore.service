@@ -1,0 +1,11 @@
+[Unit]
+Description=roscore_innospace
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/ros/noetic/bin/roscore
+EnvironmentFile=/etc/env_inno_blackbox
+Restart=on-abort
+RestartSec=5
+
+[Install]
+WantedBy=default.target

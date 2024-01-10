@@ -1,0 +1,11 @@
+[Unit]
+Description=enable_ttyUSB0 in sudo mode
+
+[Service]
+ExecStart=/usr/bin/chmod 666 /dev/ttyUSB0
+EnvironmentFile=/etc/env_inno_blackbox
+Restart=on-abort
+RestartSec=5
+
+[Install]
+WantedBy=default.target

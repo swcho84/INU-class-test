@@ -1,0 +1,11 @@
+[Unit]
+Description=enable_ttyAMA2 in sudo mode
+
+[Service]
+ExecStart=/usr/bin/chmod 666 /dev/ttyAMA2
+EnvironmentFile=/etc/env_inno_blackbox
+Restart=on-abort
+RestartSec=5
+
+[Install]
+WantedBy=default.target

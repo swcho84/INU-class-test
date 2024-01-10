@@ -1,0 +1,16 @@
+#
+# Copyright (c) 2016-2017, NVIDIA CORPORATION.  All rights reserved.
+#
+
+[Unit]
+Description=clock_sync service
+After=nv.service
+
+[Service]
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/bin/rdate -s time.bora.net && /sbin/hwclock --systohc
+Restart=on-abort
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
